@@ -1,22 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{flex:1, flexDirection:"row"}}>
+    <View style={{flex:1  }}>
       <View style={{flex:1, backgroundColor: "cyan"}}>
-        <Text>Hola</Text>
+        <Text>cyan</Text>
+        <Image></Image>
 
       </View>
       <View style={{flex:2, backgroundColor: "blue"}}>
-        <Text>Hola</Text>
+        <Text>blue</Text>
         
       </View>
-      <View style={{flex:4, backgroundColor: "powderblue"}}>
-        <Text>Hola</Text>
+      <View style={{flex:2, backgroundColor: "powderblue"}}>
+        <Text>powderblue</Text>
       </View>
-      <View style={{flex:8, backgroundColor: "grey"}}>
-        <Text>Hola</Text>
+      <View style={{flex:2, backgroundColor: "grey"}}>
+        <Text>grey</Text>
       </View>
       
     </View>
