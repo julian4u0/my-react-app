@@ -10,6 +10,13 @@ export default class hw extends Component {
       salario : ''
     }
   }
+
+  mostrar(){
+    alert(this.state.nombre)
+  }
+  limpiar(){
+    this.setState({nombre : ''})
+  }
   render(){
     return (
       <View style={{ flex:1 }}>
@@ -40,9 +47,13 @@ export default class hw extends Component {
           />
           <Button 
           title="Enviar"
-          onPress={() => {alert(this.state.nombre)}}
+          onPress={() => this.mostrar()}
           />
-          <Image source={require('./assets/ahaha.jpg')} style={{width: "80%", height: "70%"}}/>
+          <Button 
+          title="Limpiar"
+          onPress={() => this.limpiar()}
+          />
+          <Image source={require('./assets/ahaha.jpg')} style={{width: "20%", height: "20%"}}/>
           
         </View>
         <View style={{flex:1, backgroundColor: "powderblue"}}>
