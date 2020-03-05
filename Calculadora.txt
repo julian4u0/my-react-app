@@ -1,0 +1,115 @@
+import React, { Component } from 'react';
+
+import { Platform, StyleSheet, View, TextInput, TouchableOpacity, Alert, Text } from 'react-native';
+
+export default class App extends Component {
+
+  constructor(){
+
+    super();
+
+    this.state={
+      num1:'',
+      num2:'',
+      resultado:''
+
+    }
+  }
+  
+  operacion=(oper,param1,param2)=>{
+    switch(oper)
+    {
+      case "+":
+          this.setState({resultado:parseFloat(param1)+parseFloat(param2)});
+          break;
+      case "-":
+          this.setState({resultado:parseFloat(param1)-parseFloat(param2)});
+          break;    
+    }
+  }
+  suma=(param1,param2)=>{
+  this.setState({resultado:parseFloat(param1)+parseFloat(param2)});
+  }
+resta=(param1,param2)=>{
+  this.setState({resultado:parseFloat(param1)-parseFloat(param2)});
+  }  
+  render() {
+
+    return (
+
+      <View style={styles.MainContainer}>
+
+        <TextInput
+          placeholder="Ingrese primer valor"
+          onChangeText={data => this.setState({ num1: data })}
+          style={styles.textInputStyle}
+          underlineColorAndroid='transparent'
+          keyboardType = {"number"}
+        />
+         <TextInput
+          placeholder="Ingrese segundo valor"
+          onChangeText={data => this.setState({ num2: data })}
+          style={styles.textInputStyle}
+          underlineColorAndroid='transparent'
+          keyboardType = {"number"}
+        />
+        
+        <Text>{this.state.resultado}</Text>
+
+        <TouchableOpacity onPress={this.operacion.bind(this,"+",this.state.num1,this.state.num2)} activeOpacity={0.6} style={styles.button} >
+ 
+          <Text style={styles.TextStyle}> Suma </Text>
+
+        </TouchableOpacity>
+        <Text>{'\n'}</Text>
+        <TouchableOpacity onPress={this.operacion.bind(this, "-",this.state.num1,this.state.num2)} activeOpacity={0.6} style={styles.button} >
+ 
+          <Text style={styles.TextStyle}>Resta</Text>
+
+        </TouchableOpacity>
+
+      </View>
+
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+
+  MainContainer: {
+
+    flex: 1,
+    paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20
+
+  },
+
+  textInputStyle: {
+ 
+    height: 40,
+    width: '90%',
+    textAlign: 'center',
+    borderWidth: 1,
+    borderColor: '#028b53',
+    borderRadius: 8,
+    marginBottom: 15
+  },
+
+  button: {
+    
+    width: '80%',
+    padding: 8,
+    backgroundColor: '#4CAF50',
+    borderRadius:5,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+   
+  TextStyle:{
+      color:'#fff',
+      textAlign:'center',
+  }
+
+});

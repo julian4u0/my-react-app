@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, TextInput, Button} from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity, Alert} from 'react-native';
 
 export default class hw extends Component {
   constructor() {
@@ -27,6 +27,14 @@ export default class hw extends Component {
         </View>
         <View style={{flex:3, backgroundColor: "blue"}}>
           <Text>blue</Text>
+
+          <TextInput
+          placeholder="Ingrese primer valor"
+          onChangeText={data => this.setState({ num1: data })}
+          style={styles.textInputStyle}
+          underlineColorAndroid='transparent'
+          keyboardType = {"number"}
+        />
           <TextInput 
           placeholder="Nombre" 
           style={{backgroundColor: "white", height:30, width: 100}} 
@@ -45,6 +53,8 @@ export default class hw extends Component {
           value={this.state.salario}
           onChangeText={(salario) =>  this.setState({salario})}
           />
+
+          
           <Button 
           title="Enviar"
           onPress={() => this.mostrar()}
