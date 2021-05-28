@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import Navbar from '../components/Navbar'
 import Welcome from '../components/Index/Welcome'
 import CheckUsername from '../components/Index/CheckUsername'

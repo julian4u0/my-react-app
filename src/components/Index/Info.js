@@ -13,9 +13,9 @@ function Info() {
         Share with others
       </div>
       <Link
-        to="/dashboard"
+        to="/profile"
         className="bg-red-500 text-lg mb-24 hover:bg-red-400 w-1/2 text-white font-bold py-2 px-4 border-b-4 border-red-700 focus:outline-none hover:border-red-500 rounded">
-        Create My Perspace
+        Go to dashboard
       </Link>
     </div>
   )
