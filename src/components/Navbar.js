@@ -78,7 +78,7 @@ function Navbar() {
                     to="/"
                     className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Explore</Link>
                   <Link
-                    to="/"
+                    to="/profile"
                     className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">My Space</Link>
                   <Link
                     to="/"
@@ -98,7 +98,7 @@ function Navbar() {
         <div className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
-              to="/"
+              to="/profile"
               className="text-red-500 hover:bg-red-700 hover:text-white block px-3 text-center py-2 rounded-md text-base font-medium">Dashboard</Link>
 
             <Link
