@@ -98,7 +98,7 @@ function Navbar() {
 
         {/* Mobile Menu */}
         <Disclosure.Panel className="sm:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-2 flex items-center flex-col pt-2 pb-3 space-y-1">
             <Link
               to="/"
               className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Explore</Link>
