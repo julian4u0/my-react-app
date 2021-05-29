@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import {Disclosure} from '@headlessui/react'
 
 function Navbar() {
   return (
-    <div>
+    <Disclosure as="nav" className="bg-gray-800">
       <div className="bg-red-100">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-20">
             <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
-              <button
+
+              <Disclosure.Button
                 type="button"
-                className="inline-flex items-center justify-center p-2 rounded-md text-black-400 hover:text-black hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="inline-flex items-center justify-center p-2 rounded-md text-red-500 hover:text-white hover:bg-red-500 focus:outline-none"
                 aria-controls="mobile-menu"
                 aria-expanded="false">
                 <span className="sr-only">Open main menu</span>
@@ -39,7 +41,7 @@ function Navbar() {
                     strokeWidth={2}
                     d="M6 18L18 6M6 6l12 12"/>
                 </svg>
-              </button>
+              </Disclosure.Button>
             </div>
             <div
               className="flex-1 flex items-center text-center px-2 md:px-14 justify-between sm:justify-start">
@@ -95,26 +97,26 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="sm:hidden" id="mobile-menu">
+        <Disclosure.Panel className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
+              to="/"
+              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Explore</Link>
+            <Link
               to="/profile"
-              className="text-red-500 hover:bg-red-700 hover:text-white block px-3 text-center py-2 rounded-md text-base font-medium">Dashboard</Link>
+              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">My Space</Link>
+            <Link
+              to="/"
+              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">About</Link>
+            <Link
+              to="/"
+              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Login</Link>
 
-            <Link
-              to="/"
-              className="text-red-500 hover:bg-red-700 hover:text-white block px-3 text-center py-2 rounded-md text-base font-medium">Team</Link>
-            <Link
-              to="/"
-              className="text-red-500 hover:bg-red-700 hover:text-white block px-3 text-center py-2 rounded-md text-base font-medium">Projects</Link>
-            <Link
-              to="/"
-              className="text-red-500 hover:bg-red-700 hover:text-white block px-3 text-center py-2 rounded-md text-base font-medium">Calendar</Link>
           </div>
-        </div>
+        </Disclosure.Panel>
         {/* End Mobile Menu */}
       </div>
-    </div>
+    </Disclosure>
   );
 }
 
