@@ -1,21 +1,21 @@
 import React from "react";
 
 const Link = function (props) {
-  const {titleValue, urlValue, onChange, onDelete} = props;
+  const {titleValue, urlValue, onChange, onDelete, onMove} = props;
   return (
     <div className="flex flex-row w-full">
       <div
         className="flex flex-row  justify-between py-2 my-2 rounded-l-lg bg-red-400 w-full ">
-        <div className="flex flex-col pl-2">
+        <div className="flex flex-col pl-2 text-red-900">
           <input
-            className="p-1 bg-red-400 placeholder-red-50"
+            className="p-1 bg-red-400 focus:outline-none focus:bg-red-300 font-semibold placeholder-red-50"
             type="text"
             placeholder="Title"
             name="titleValue"
             value={titleValue}
             onChange={onChange}/>
           <input
-            className="p-1 mt-1 bg-red-400 placeholder-red-50"
+            className="p-1   focus:outline-none focus:bg-red-300 font-semibold bg-red-400 placeholder-red-50"
             placeholder="Url"
             type="text"
             name="urlValue"
@@ -26,20 +26,23 @@ const Link = function (props) {
 
         <div
           onClick={onDelete}
-          className="border bg-red-400 mr-4 rounded hover:text-red-100 cursor-pointer text-white font-semibold">
+          className="border bg-red-400 mr-2 rounded hover:text-red-100 cursor-pointer text-white font-semibold">
           Delete
         </div>
       </div>
       <div
-        onClick={onDelete}
-        className="flex flex-col justify-between p-3 my-2 rounded-r-lg bg-red-300   cursor-pointer text-white font-semibold">
-        
-        <div className="hover:text-red-100">
-          Up
-        </div>
-        <div className="hover:text-red-100">
-          Down
-        </div>
+        className="flex flex-col justify-between p-3 my-2 rounded-r-lg bg-red-300  text-white font-semibold">
+
+        <input
+          type="button"
+          onClick={onMove}
+          value="up"
+          className="bg-red-300 hover:text-red-100 cursor-pointer"/>
+        <input
+          type="button"
+          onClick={onMove}
+          value="down"
+          className=" bg-red-300 hover:text-red-100 cursor-pointer"/>
       </div>
     </div>
   );
@@ -97,6 +100,31 @@ class LinksContainer extends React.Component {
 
   }
   // ----------------------------------------
+  onMove = (e, idx) => {
+
+    //Copy of elements
+    var links = [...this.state.links];
+
+    //Copy of moving element
+    const movingElem = links[idx]
+    
+    //Delete moving element
+    links.splice(idx, 1)
+
+    //Add moving element on other position
+    
+    if (e.target.value === "down") {
+      links.splice(idx+1, 0, movingElem)
+      
+    } else {
+      links.splice(idx-1, 0, movingElem)
+      
+    }
+
+    //Set links
+    this.setState({links: links});
+    
+  }
 
   addLink = () => {
     const links = [
@@ -116,15 +144,14 @@ class LinksContainer extends React.Component {
 
   render() {
     return (
-      <div className="flex items-center flex-col w-full">
+      <div className="flex items-center flex-col">
 
         <button
           onClick={this.addLink}
-          className="w-1/2 bg-red-300 hover:bg-red-400 text-white font-semibold py-2 px-4  rounded shadow">
+          className="bg-red-300 hover:bg-red-400 text-white font-semibold p-3 my-2  rounded shadow">
           Add New Link
         </button>
-
-        <div className="w-1/2">
+        <div className="flex flex-col justify-center items-center">
 
           {this
             .state
@@ -135,9 +162,9 @@ class LinksContainer extends React.Component {
                 titleValue={link.titleValue}
                 urlValue={link.urlValue}
                 onChange={(e) => this.updateValue(e, idx)}
-                onDelete={() => this.onDelete(idx)}/>)
+                onDelete={() => this.onDelete(idx)}
+                onMove={(e) => this.onMove(e, idx)}/>)
             })}
-
         </div>
 
       </div>
