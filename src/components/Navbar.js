@@ -81,7 +81,7 @@ function Navbar() {
                     className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Explore</Link>
                   <Link
                     to="/profile"
-                    className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">My Space</Link>
+                    className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">My Profile</Link>
                   <Link
                     to="/"
                     className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">About</Link>
@@ -104,7 +104,7 @@ function Navbar() {
               className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Explore</Link>
             <Link
               to="/profile"
-              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">My Space</Link>
+              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">My Profile</Link>
             <Link
               to="/"
               className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">About</Link>

@@ -18,9 +18,9 @@ ReactDOM.render(
     {/* add routes with layouts */}
     {/* <Route path="/community" component={Community}/>
     <Route path="/create" exact component={Create}/> */}
-    <Route path="/profile" exact component={Profile}/>
+    <Route path="/profile" component={Profile}/>
     <Route path="/" exact component={Index}/> {/* add redirect for first page */}
-    <Redirect from="*" to="/"/>
+    {/* <Redirect from="*" to="/"/> */}
   </Switch>
 </BrowserRouter>, document.getElementById('root'));
 

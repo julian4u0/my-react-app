@@ -102,6 +102,9 @@ class LinksContainer extends React.Component {
         }, {
           titleValue: 'test',
           urlValue: 'test.com'
+        }, {
+          titleValue: '',
+          urlValue: ''
         }
       ]
     };

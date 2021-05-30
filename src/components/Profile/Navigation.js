@@ -8,10 +8,10 @@ function Navigation() {
           <Link className="text-red-500 hover:text-red-700" to="/profile">Links</Link>
         </li>
         <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/styles">Styles</Link>
+          <Link className="text-red-500 hover:text-red-700" to="/profile/styles">Styles</Link>
         </li>
         <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/analytics">Marketplace</Link>
+          <Link className="text-red-500 hover:text-red-700" to="/Connect">Connect</Link>
         </li>
         <li className="nav-item pl-2 not-selected">
           <Link className="text-red-500 hover:text-red-700" to="/analytics">Stats</Link>
