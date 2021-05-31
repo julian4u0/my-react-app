@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import logo from './logo.svg';
@@ -9,6 +10,7 @@ import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
 import Index from './views/Index';
 import Profile from './views/Profile';
+import Connect from './views/Connect';
 // import Create from "views/Create.js";
 // import Community from "views/Community.js";
 
@@ -19,6 +21,7 @@ ReactDOM.render(
     {/* <Route path="/community" component={Community}/>
     <Route path="/create" exact component={Create}/> */}
     <Route path="/profile" component={Profile}/>
+    <Route path="/connect" component={Connect}/>
     <Route path="/" exact component={Index}/> {/* add redirect for first page */}
     {/* <Redirect from="*" to="/"/> */}
   </Switch>

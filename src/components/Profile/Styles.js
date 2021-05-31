@@ -7,14 +7,12 @@ const StyleCard = function (props) {
       <div
         onClick={onSelection}
         className={prop.selected
-        ? "flex flex-row cursor-pointer justify-between py-2 my-2 rounded-lg bg-red-400 w-f" +
-          "ull"
-        : "ring ring-black flex flex-row cursor-pointer justify-between py-2 my-2 rounded-l" +
-          "g bg-red-400 w-full "}>
-        <div className="flex flex-col pl-2 text-red-900">
-
+        ? "ring ring-red-700 flex flex-row cursor-pointer justify-center py-2 my-2 rounded-l" +
+          "g text-red-900 w-full bg-red-300"
+        : " flex flex-row cursor-pointer justify-center py-2 my-2 rounded-lg bg-white w-" +
+          "full  bg-red-400"}>
+        <div className="flex flex-row py-2">
           {prop.styleId}
-
         </div>
 
       </div>
@@ -30,13 +28,13 @@ class Styles extends React.Component {
       stylesOwned: [
         {
           styleId: 'dark',
-          selected: true
+          selected: false
         }, {
           styleId: 'blue',
-          selected: true
+          selected: false
         }, {
           styleId: 'red',
-          selected: true
+          selected: false
         }, {
           styleId: 'flowers',
           selected: false
@@ -45,15 +43,28 @@ class Styles extends React.Component {
           selected: true
         }, {
           styleId: 'night',
-          selected: true
+          selected: false
         }
-      ]
+      ],
+      styleSelection: "" 
     };
   }
 
   // ----------------------------------------
   onSelection = (idx) => {
-    console.log("Selected style -> " + idx)
+    var newSelection = [...this.state.stylesOwned]
+
+    newSelection.map((e) => {
+      e.selected = false
+    })
+
+    newSelection[idx].selected = !newSelection[idx].selected
+
+
+    this.setState.styleSelection = newSelection[idx]
+    
+    console.log(this.setState.styleSelection)
+    this.setState({newSelection});
 
     //TODO: Selection based on click
 

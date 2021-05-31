@@ -11,20 +11,22 @@ function Dashboard() {
       <Navbar/>
       <Navigation/>
       <Switch>
-        
+
         <Route exact path="/profile">
           <LinksContainer/>
         </Route>
         <Route exact path="/profile/styles">
           <Styles/>
         </Route>
+        <Route exact path="/profile/stats">
+          <Styles/>
+        </Route>
+        <Route exact path="/profile/display">
+          <Styles/>
+        </Route>
 
       </Switch>
 
-      <div className="bg-red-50 pt-4 flex flex-col items-center">
-
-
-      </div>
     </div>
   )
 }

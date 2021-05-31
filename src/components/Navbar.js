@@ -86,8 +86,8 @@ function Navbar() {
                     to="/"
                     className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">About</Link>
                   <Link
-                    to="/"
-                    className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Login</Link>
+                    to="/connect"
+                    className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Connect</Link>
 
                 </div>
               </div>
@@ -109,8 +109,8 @@ function Navbar() {
               to="/"
               className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">About</Link>
             <Link
-              to="/"
-              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Login</Link>
+              to="/connect"
+              className="text-red-400 text-lg hover:text-red-500 px-3 py-2 font-semibold">Connect</Link>
 
           </div>
         </Disclosure.Panel>

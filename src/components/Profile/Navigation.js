@@ -11,10 +11,10 @@ function Navigation() {
           <Link className="text-red-500 hover:text-red-700" to="/profile/styles">Styles</Link>
         </li>
         <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/Connect">Connect</Link>
+          <Link className="text-red-500 hover:text-red-700" to="/profile/display">Display</Link>
         </li>
         <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/analytics">Stats</Link>
+          <Link className="text-red-500 hover:text-red-700" to="/profile/stats">Stats</Link>
         </li>
       </ul>
 
