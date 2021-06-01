@@ -7,10 +7,10 @@ const StyleCard = function (props) {
       <div
         onClick={onSelection}
         className={prop.selected
-        ? "ring ring-red-700 flex flex-row cursor-pointer justify-center py-2 my-2 rounded-l" +
-          "g text-red-900 w-full bg-red-300"
+        ? "ring ring-gray-700 flex flex-row cursor-pointer justify-center py-2 my-2 rounded-l" +
+          "g text-gray-900 w-full bg-gray-300"
         : " flex flex-row cursor-pointer justify-center py-2 my-2 rounded-lg bg-white w-" +
-          "full  bg-red-400"}>
+          "full  bg-gray-400"}>
         <div className="flex flex-row py-2">
           {prop.styleId}
         </div>
@@ -33,7 +33,7 @@ class Styles extends React.Component {
           styleId: 'blue',
           selected: false
         }, {
-          styleId: 'red',
+          styleId: 'gray',
           selected: false
         }, {
           styleId: 'flowers',
@@ -72,7 +72,7 @@ class Styles extends React.Component {
 
   render() {
     return (
-      <div className="flex items-center flex-col">
+      <div className="flex bg-grayb items-center flex-col">
 
         <div className="flex p-4 flex-row flex justify-center w-full flex-wrap ">
 
@@ -86,7 +86,7 @@ class Styles extends React.Component {
 
         <button
           onClick={this.addLink}
-          className="bg-green-500 hover:bg-green-600 text-white font-semibold p-3 my-2  rounded shadow">
+          className="bg-green-700 hover:bg-green-600 text-white font-semibold p-3 mt-1 mb-4  rounded shadow">
           Save selection
         </button>
       </div>

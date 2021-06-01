@@ -5,17 +5,17 @@ const Link = function (props) {
   return (
     <div className="flex flex-row w-full">
       <div
-        className="flex flex-row  justify-between py-2 my-2 rounded-l-lg bg-red-400 w-full ">
-        <div className="flex flex-col pl-2 text-red-900">
+        className="flex flex-row  justify-between py-2 my-2 rounded-l-lg bg-grayc w-full ">
+        <div className="flex flex-col pl-2 text-gray-900">
           <input
-            className="p-1 bg-red-400 focus:outline-none focus:bg-red-300 font-semibold placeholder-red-50"
+            className="p-1 bg-grayc focus:outline-none text-gray-300 focus:text-white focus:bg-gray-700 font-semibold placeholder-gray-50"
             type="text"
             placeholder="Title"
             name="titleValue"
             value={titleValue}
             onChange={onChange}/>
           <input
-            className="p-1   focus:outline-none focus:bg-red-300 font-semibold bg-red-400 placeholder-red-50"
+            className="p-1 bg-grayc focus:outline-none text-gray-300 focus:text-white focus:bg-gray-700 font-semibold placeholder-gray-50"
             placeholder="Url"
             type="text"
             name="urlValue"
@@ -26,7 +26,9 @@ const Link = function (props) {
 
         <div
           onClick={onDelete}
-          className="mr-2 flex flex-col justify-center text-center hover:text-red-100 cursor-pointer text-white font-semibold">
+          className="mr-2 flex flex-col justify-center text-center hover:text-gray-400 cursor-pointer text-white font-semibold">
+          
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -42,9 +44,9 @@ const Link = function (props) {
         </div>
       </div>
       <div
-        className="flex flex-col justify-between p-3 my-2 rounded-r-lg bg-red-300  text-white font-semibold">
+        className="flex flex-col justify-between p-3 my-2 rounded-r-lg bg-gray-600  text-white font-semibold">
 
-        <div onClick={onMove} className="bg-red-300 hover:text-red-100 cursor-pointer">
+        <div onClick={onMove} className="bg-gray-600 hover:text-gray-400 cursor-pointer">
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +67,7 @@ const Link = function (props) {
           type="button"
           onClick={onMove}
           mov="down"
-          className=" bg-red-300 hover:text-red-100 cursor-pointer">
+          className=" bg-gray-600 hover:text-gray-400 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -187,11 +189,11 @@ class LinksContainer extends React.Component {
 
   render() {
     return (
-      <div className="flex items-center flex-col">
+      <div className="flex bg-grayb items-center flex-col">
 
         <button
           onClick={this.addLink}
-          className="bg-red-300 hover:bg-red-400 text-white font-semibold p-3 my-2  rounded shadow">
+          className="bg-green-700 hover:bg-green-600 text-white font-semibold p-3 my-2  rounded shadow">
           Add New Link
         </button>
         <div className="flex flex-col justify-center items-center">

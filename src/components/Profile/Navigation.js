@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <nav className="bg-red-100 border border-red-300 p-2 items-center">
+    <nav className="bg-grayc border-t border-b border-gray-600 p-2 items-center">
       <ul className="flex flex-row font-semibold m-auto justify-evenly w-full">
-        <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/profile">Links</Link>
+        <li className="nav-item pl-2">
+          <Link className="text-gray-50 hover:text-gray-300" to="/profile">Links</Link>
         </li>
-        <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/profile/styles">Styles</Link>
+        <li className="nav-item pl-2">
+          <Link className="text-gray-50 hover:text-gray-300" to="/profile/styles">Styles</Link>
         </li>
-        <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/profile/display">Display</Link>
+        <li className="nav-item pl-2">
+          <Link className="text-gray-50 hover:text-gray-300" to="/profile/display">Display</Link>
         </li>
-        <li className="nav-item pl-2 not-selected">
-          <Link className="text-red-500 hover:text-red-700" to="/profile/stats">Stats</Link>
+        <li className="nav-item pl-2">
+          <Link className="text-gray-50 hover:text-gray-300" to="/profile/stats">Stats</Link>
         </li>
       </ul>
 

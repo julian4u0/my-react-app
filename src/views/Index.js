@@ -8,7 +8,7 @@ function Index() {
   return (
     <div>
       <Navbar/>
-      <div className="bg-red-50 pt-10 flex flex-col items-center">
+      <div className="bg-grayb border-t border-gray-600 pt-10 flex flex-col items-center">
         <Welcome/>
         <CheckUsername />
 
