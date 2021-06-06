@@ -2,10 +2,11 @@ import dynamic from "next/dynamic";
 import "tailwindcss/tailwind.css";
 
 const Navbar = dynamic(() => import("../components/Navbar").then((mod) => mod));
-const LinksContainer = dynamic(() => import("../components/Profile/LinksContainer").then((mod) => mod));
+const Styles = dynamic(() =>
+  import("../components/Profile/Styles").then((mod) => mod)
+);
 
-const Navigation = dynamic(() => import('../components/Profile/Navigation'))
-
+const Navigation = dynamic(() => import("../components/Profile/Navigation"));
 
 // posts will be populated at build time by getStaticProps()
 function Links({ user }) {
@@ -14,19 +15,12 @@ function Links({ user }) {
       <title>Links</title>
 
       <link rel="icon" href="/favicon.ico" />
-      
+
       <Navbar />
 
       <Navigation />
 
-      <LinksContainer />
-      <ul>
-        {user.links.map((link) => (
-          <li key={link.name}>
-            <a href={link.dir}> {link.name}</a>
-          </li>
-        ))}
-      </ul>
+      <Styles />
     </div>
   );
 }

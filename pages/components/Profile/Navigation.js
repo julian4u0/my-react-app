@@ -21,17 +21,32 @@ function Navigation() {
           <Link href="/profile/links">Links</Link>
         </div>
         <div
-          className={router.pathname == "/profile/styles" ? styles.active : styles.unactive}
+          className={
+            router.pathname == "/profile/styles"
+              ? styles.active
+              : styles.unactive
+          }
         >
           <Link href="/profile/styles">Styles</Link>
         </div>
         <div
-          className={router.pathname == "/profile/a" ? styles.active : styles.unactive}
+          className={
+            router.pathname == "/profile/a" ? styles.active : styles.unactive
+          }
         >
           <Link href="/profile/display">Display</Link>
         </div>
         <div
-          className={router.pathname == "/profile/b" ? styles.active : styles.unactive}
+          className={
+            router.pathname == "/profile/nft" ? styles.active : styles.unactive
+          }
+        >
+          <Link href="/profile/nft">My NFTs</Link>
+        </div>
+        <div
+          className={
+            router.pathname == "/profile/b" ? styles.active : styles.unactive
+          }
         >
           <Link href="/profile/stats">Stats</Link>
         </div>
