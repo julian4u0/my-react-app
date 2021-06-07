@@ -29,13 +29,7 @@ function Navigation() {
         >
           <Link href="/profile/styles">Styles</Link>
         </div>
-        <div
-          className={
-            router.pathname == "/profile/a" ? styles.active : styles.unactive
-          }
-        >
-          <Link href="/profile/display">Display</Link>
-        </div>
+        
         <div
           className={
             router.pathname == "/profile/nft" ? styles.active : styles.unactive
@@ -45,7 +39,7 @@ function Navigation() {
         </div>
         <div
           className={
-            router.pathname == "/profile/b" ? styles.active : styles.unactive
+            router.pathname == "/profile/stats" ? styles.active : styles.unactive
           }
         >
           <Link href="/profile/stats">Stats</Link>

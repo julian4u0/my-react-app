@@ -110,7 +110,7 @@ function Navbar() {
                         : styles.unactive
                     }
                   >
-                    <Link href="/explore">Connect</Link>
+                    <Link href="/explore">Login</Link>
                   </div>
                 </div>
               </div>
@@ -121,33 +121,47 @@ function Navbar() {
         {/* Mobile Menu */}
         <Disclosure.Panel className="sm:hidden" id="mobile-menu">
           <div className="px-2  text-gray-400 flex items-center flex-col pt-2 pb-3 space-y-1">
-            <Link
-              href="/"
-              className="text-lg hover:text-gray-100 px-3 py-2 font-semibold"
-            >
-              Explore
-            </Link>
-            <Link
-              href="/profile"
-              className="text-lg hover:text-gray-100 px-3 py-2 font-semibold"
-            >
-              My Profile
-            </Link>
-            <Link
-              href="/"
-              className="text-lg hover:text-gray-100 px-3 py-2 font-semibold"
-            >
-              About
-            </Link>
-            <div className="text-lg hover:text-gray-100 px-3 py-2 font-semibold">
-              HOla
-            </div>
-            <Link
-              href="/connect"
-              className="text-lg hover:text-gray-100 px-3 py-2 font-semibold"
-            >
-              Connect
-            </Link>
+
+
+
+          <div
+                    className={
+                      router.pathname == "/profile/links"
+                        ? styles.active
+                        : styles.unactive
+                    }
+                  >
+                    <Link href="/profile/links">My Profile</Link>
+                  </div>
+                  <div
+                    className={
+                      router.pathname == "/profile/connect"
+                        ? styles.active
+                        : styles.unactive
+                    }
+                  >
+                    <Link href="/profile/connect">Connect</Link>
+                  </div>
+                  <div
+                    className={
+                      router.pathname == "/explore"
+                        ? styles.active
+                        : styles.unactive
+                    }
+                  >
+                    <Link href="/explore">Explore</Link>
+                  </div>
+                  <div
+                    className={
+                      router.pathname == "/explore"
+                        ? styles.active
+                        : styles.unactive
+                    }
+                  >
+                    <Link href="/explore">About</Link>
+                  </div>
+                  
+
           </div>
         </Disclosure.Panel>
         {/* End Mobile Menu */}
